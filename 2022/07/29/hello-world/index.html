@@ -315,6 +315,17 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2022/07/29/hello-world/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2022/07/29/hello-world/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -397,24 +408,11 @@
           
   <div class="comments" id="comments">
     
-        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-      <div>
-        <div id="gitalk-container"/>
-        <script type="text/javascript">
-          var gitalk = new Gitalk({
-            clientID: "b5712e657999fbadf180",
-            clientSecret: "c5139b6e1d8f4d3fccffc7357b281ec5e2af246e",
-            repo: "git_comments", // 博客仓库地址
-            owner: "muxq", // github 用户名
-            admin: ["muxq"], // github 用户名
-            perPage: 20,
-            id: location.pathname.slice(0, 50), // 查找 issus 的条件，后面将对 id 有针对逻辑
-            title: "Hello World",
-            body: "🚀 " + location.href + "\n\n欢迎通过 issues 留言 ，互相交流学习😊", // 初始化后，issues 的内容
-          });
-          gitalk.render("gitalk-container");
-        </script>
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
       </div>
     
   </div> 
@@ -646,6 +644,26 @@
 
   
 
+    
+      <script id="dsq-count-scr" src="https://dayuxiaoyu.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://example.com/2022/07/29/hello-world/';
+          this.page.identifier = '2022/07/29/hello-world/';
+          this.page.title = 'Hello World';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://dayuxiaoyu.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
 
 
 
@@ -658,10 +676,6 @@
   
 
 
-
-
-
-  
 
 
 

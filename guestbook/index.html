@@ -296,24 +296,11 @@
           
   <div class="comments" id="comments">
     
-        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-      <div>
-        <div id="gitalk-container"/>
-        <script type="text/javascript">
-          var gitalk = new Gitalk({
-            clientID: "b5712e657999fbadf180",
-            clientSecret: "c5139b6e1d8f4d3fccffc7357b281ec5e2af246e",
-            repo: "git_comments", // 博客仓库地址
-            owner: "muxq", // github 用户名
-            admin: ["muxq"], // github 用户名
-            perPage: 20,
-            id: location.pathname.slice(0, 50), // 查找 issus 的条件，后面将对 id 有针对逻辑
-            title: "guestbook",
-            body: "🚀 " + location.href + "\n\n欢迎通过 issues 留言 ，互相交流学习😊", // 初始化后，issues 的内容
-          });
-          gitalk.render("gitalk-container");
-        </script>
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
       </div>
     
   </div> 
@@ -520,6 +507,26 @@
 
   
 
+    
+      <script id="dsq-count-scr" src="https://dayuxiaoyu.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://example.com/guestbook/index.html';
+          this.page.identifier = 'guestbook/index.html';
+          this.page.title = 'guestbook';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://dayuxiaoyu.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
 
 
 
@@ -532,10 +539,6 @@
   
 
 
-
-
-
-  
 
 
 
