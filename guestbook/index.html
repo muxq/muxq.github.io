@@ -296,39 +296,27 @@
           
   <div class="comments" id="comments">
     
-    <div onclick="showGitment()" id="gitment_title" class="gitment_title">显示 Comments 评论</div>
-    <div id="container" style="display:none"></div>
-    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-    <script>
-    const myTheme = {
-    render(state, instance) {
-    const container = document.createElement('div');
-    container.lang = "en-US";
-    container.className = 'gitment-container gitment-root-container';
-    container.appendChild(instance.renderHeader(state, instance));
-    container.appendChild(instance.renderEditor(state, instance));
-    container.appendChild(instance.renderComments(state, instance));
-    container.appendChild(instance.renderFooter(state, instance));
-    return container;
-    }
-    }
-    function showGitment() {
-    $("#gitment_title").attr("style", "display:none");
-    $("#container").attr("style", "").addClass("gitment_container");
-    var gitment = new Gitment({
-    id: window.location.pathname,
-    theme: myTheme,
-    owner: '',
-    repo: '',
-    oauth: {
-    client_id: 'b5712e657999fbadf180',
-    client_secret: 'c5139b6e1d8f4d3fccffc7357b281ec5e2af246e'
-    }
-    });
-    gitment.render('container');
-}
-</script>
+        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+      <div>
+        <div id="gitalk-container"/>
+        <script type="text/javascript">
+          var gitalk = new Gitalk({
+            clientID: "",
+            clientSecret: "",
+            repo: "", // 博客仓库地址
+            owner: "", // github 用户名
+            admin: [""], // github 用户名
+            perPage: 20,
+            id: location.pathname.slice(0, 50), // 查找 issus 的条件，后面将对 id 有针对逻辑
+            title: "guestbook",
+            body: "🚀 " + location.href + "\n\n欢迎通过 issues 留言 ，互相交流学习😊", // 初始化后，issues 的内容
+          });
+          gitalk.render("gitalk-container");
+        </script>
+      </div>
+    
+  </div> 
 
 
         </div>
