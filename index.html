@@ -97,7 +97,7 @@
 <meta name="description" content="大渔小予">
 <meta property="og:type" content="website">
 <meta property="og:title" content="大渔小予">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="https://muxq.github.io/%20/index.html">
 <meta property="og:site_name" content="大渔小予">
 <meta property="og:description" content="大渔小予">
 <meta property="og:locale">
@@ -131,7 +131,7 @@
 
 
 
-  <link rel="canonical" href="http://example.com/"/>
+  <link rel="canonical" href="https://muxq.github.io/ /"/>
 
 
 
@@ -282,7 +282,165 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/07/29/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://muxq.github.io/ /2022/07/29/antidebug01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大渔小予">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/07/29/antidebug01/" itemprop="url">Windows反调试技术</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-07-29T17:36:47+08:00">
+                2022-07-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/anti/" itemprop="url" rel="index">
+                    <span itemprop="name">anti</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2022/07/29/antidebug01/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2022/07/29/antidebug01/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>首先感谢github和hexo，让自己能够白piao一把，轻松搭建一个属于自己的博客，能够有一个记录，分享和学习的平台，开源，是这个世界最伟大的发明！</p>
+<p>开启本篇博文的正题，该篇博文主要讲解博主从接触到使用反调试工具的一些经验，如果你已是逆向大神，请指正文中的不正确的之处，博主在这里不胜感激，也希望通过博客结识对逆向感兴趣的朋友共同学习和突破。<br>在没有接触反调试工具前，一直认PE程序逆向是一件非常困难的事情，相信很多Windows程序员都存在这样的观点。碰巧在工作中也遇到过需要实现保护自己程序的需求，这时候懵懂的了解了代码混淆，程序加壳的概念，但是当时并不的这些手段对Windows程序员开发的程序有多大作用，直到最近，工作中需要对竞品分析，分析同行产品中某一功能的实现原理，才对逆向有了一定的认知，随着不断的了解，发现原来自己写的程序都在”裸奔”。</p>
+<p>本篇最后会进行实际操作，如何使用动态和静态逆向实现的账号密码登录程序。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2022/07/29/antidebug01/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+            
+    </footer>    
+  </div>
+  
+  
+  
+  </article>  
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://muxq.github.io/ /2022/07/29/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -457,14 +615,32 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>
