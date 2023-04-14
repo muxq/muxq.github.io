@@ -400,12 +400,16 @@
             <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Sandboxie是一个由Sophos开发的应用程序，它可以在Windows操作系统中创建一个隔离的环境，以保护计算机免受恶意软件的攻击。</p>
 <p>Sandboxie通过HOOK技术在R0和R3层做了api的拦截，并加入了自身的“沙盒”概念的应用，从而使应用程序运行在受“审视”的运行环境中。可以审计应用程序的所有的行为，所以是一个不错的应用Trace工具，研究Sandboxie有助于我们理解应用程序在用户和系统层的行为，同时也可以基于此项目应用在更多有安全需求的用户场景。</p>
 <p>本篇博客将带你剖析，启动一个进程Sandboxie的程序流程，有哪些不正确的地方，也希望大师可以指正。</p>
-<h2 id="启动程序"><a href="#启动程序" class="headerlink" title="启动程序"></a>启动程序</h2><p>启动进程，由沙盒提供的<code>Start.exe</code>程序来启动一个指定的进程运行在Sandboxie构造的受限环境中。应用在运行中，如果用到了需要被代理的请求，也会使用该程序拉起对应的代理服务进程。下面我们剖析一下启动一个<code>cmd.exe</code>进程的执行流程。</p>
+<h2 id="运行程序到沙盒"><a href="#运行程序到沙盒" class="headerlink" title="运行程序到沙盒"></a>运行程序到沙盒</h2><p>启动进程，由沙盒提供的<code>Start.exe</code>程序来启动一个指定的进程运行在Sandboxie构造的受限环境中。应用在运行中，如果用到了需要被代理的请求，也会使用该程序拉起对应的代理服务进程。下面我们剖析一下启动一个<code>cmd.exe</code>进程的执行流程。</p>
 <h3 id="调试环境搭建"><a href="#调试环境搭建" class="headerlink" title="调试环境搭建"></a>调试环境搭建</h3><ul>
 <li>虚拟机：Windows 7 x64</li>
-<li>调试程序：Windbg<br>  <img src="https://muxq.github.io/2023/03/07/sandboxie-01/01.png" alt="目标程序在启动时windbg自动attach设置"></li>
+<li>调试程序：Windbg <ul>
+<li><img src="https://muxq.github.io/2023/03/07/sandboxie-01/01.png" alt="目标程序在启动时windbg自动attach设置"> 设置过后，运行时windbg会自动的attach</li>
 </ul>
-
+</li>
+</ul>
+<h3 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h3><h4 id="Start-exe-启动cmd-exe"><a href="#Start-exe-启动cmd-exe" class="headerlink" title="Start.exe 启动cmd.exe"></a>Start.exe 启动cmd.exe</h4><div style="width:50%;margin:auto">
+<img src="https://muxq.github.io/2023/03/07/sandboxie-01/02.png"></div>
           
         
       
